@@ -5,10 +5,22 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #202020;
+  background-color: #272340;
   overflow: auto;
   z-index: 1;
   -webkit-overflow-scrolling: touch;
+}
+#anim-layer{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 99%;
+  width: 100%;
+  opacity: 0.7;
+}
+#sidebar .wrap{
+  position: relative;
+  z-index: 9999;
 }
 #sidebar li,
 #sidebar ul {
@@ -39,7 +51,11 @@
   text-align: center;
 }
 #sidebar .buttons {
-  margin: 0 0 20px;
+  margin-left: 40px;
+}
+#sidebar .social {
+  margin-top: 20px;
+  margin-left: 20px;
 }
 #sidebar .buttons li {
   display: block;

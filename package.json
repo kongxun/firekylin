@@ -33,6 +33,7 @@
     "nodemailer": "^2.7.2",
     "on-finished": "^2.3.0",
     "phpass": "^0.1.1",
+    "pm2": "^2.10.1",
     "push-to-firekylin": "^0.2.3",
     "qiniu": "^7.1.2",
     "request": "^2.83.0",

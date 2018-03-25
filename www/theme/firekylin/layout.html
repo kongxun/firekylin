@@ -38,6 +38,7 @@
 </head>
 <body>
 <nav id="sidebar" class="behavior_1">
+  <div id="anim-layer"></div>
   <div class="wrap">
       <div class="profile">
           <a href="/">
@@ -55,7 +56,7 @@
           </li>
           {% endfor %}
       </ul>
-      <ul class="buttons">
+      <ul class="buttons social">
         <li>
           {% if options.github_url %}
           <a class="inline" rel="nofollow" target="_blank" href="{{options.github_url}}">
@@ -95,7 +96,7 @@
 
 {% endblock %}
 <footer id="footer" class="inner">
-  &copy; {{ currentYear }}&nbsp;-&nbsp; {{options.title}}
+  &copy; 2015-{{ currentYear }}&nbsp;-&nbsp; {{options.title}}
   {% if options.miitbeian or options.mpsbeian %}
     {% if options.miitbeian %}
     &nbsp;-&nbsp;<a target="_blank" rel="nofollow" class="external beian" href="http://www.miitbeian.gov.cn/">{{options.miitbeian}}</a>
@@ -110,7 +111,11 @@
   Powered by&nbsp;<a target="_blank" href="https://thinkjs.org">ThinkJS</a>&nbsp;&amp;&nbsp;<a target="_blank" rel="nofollow" class="external" href="https://firekylin.org">FireKylin {{VERSION}}</a>
 </footer>
 </div>
+<script src="/theme/firekylin/res/js/particles.min.js"></script>
 <script src="/theme/{{options.theme}}/res/js/firekylin.js" data-ls="js_firekylin"></script>
+<script>
+    particlesJS.load('anim-layer', '/theme/firekylin/assets/particles.json');
+</script>
 {% if options.analyze_code %}
   {{options.analyze_code | safe}}
 {% endif %}
